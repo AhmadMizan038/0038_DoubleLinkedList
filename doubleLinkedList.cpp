@@ -105,6 +105,38 @@ class DoubleLinkedList
                 return;
             }
 
-            
+            //step 2. if modeis last at the begining
+            if (current == START)
+            {
+                START = current->next;//step 2a : START = START.next
+                if (START !=NULL)
+                    START->prev = NULL;//step 2b : START.prev = NULL
+            }
+            else 
+            {
+                //step 3. Link previuos note to next of current
+                current->prev->next = current->next;
+
+                //step 4. if current is not the last node
+                if (current ->next != NULL)
+                    current ->next->prev = current->prev;
+            }
+
+            //step 5.dalate the node
+            delate current;
+            coutb<< "record with roll number" << rollNo << "delate" << endl;
+        }
+
+        void traverse()
+        {
+            if (START == NULL)
+            {
+                cout << "\nList is empty" << endl;
+                return;
+            }
+
+            //Mark firts node as currentNode
+            Node *curentNode = START;
+
         }
 }
