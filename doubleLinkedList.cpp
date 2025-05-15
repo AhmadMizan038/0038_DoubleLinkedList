@@ -70,6 +70,9 @@ class DoubleLinkedList
                 cout << "\nDuplicate roll number not allowed" << endl;
                 return;
             }
-            
+            //step 9. insert between current and current->next
+            newNode->next = current->next; //step9a
+            newNode->prev = current; //step9b
+
         }
 }
