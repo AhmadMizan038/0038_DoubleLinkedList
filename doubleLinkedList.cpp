@@ -74,5 +74,10 @@ class DoubleLinkedList
             newNode->next = current->next; //step9a
             newNode->prev = current; //step9b
 
+            //insert  last node 
+            if (current->next != NULL)
+            current->next->prev = newnNode; //step9c
+
+            current->next = newNode; //step9d
         }
 }
