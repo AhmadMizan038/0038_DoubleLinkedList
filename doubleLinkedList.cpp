@@ -29,7 +29,9 @@ class DoubleLinkedList
             cin >> nim;
 
             //step 1. ALLcate memory for new node
-            Node *newNode = new NOde();
+            Node *newNode = new Node();
 
+            //step 2. Assign value to the data fields
+            newNode->noMhs =  nim;
         }
 }
