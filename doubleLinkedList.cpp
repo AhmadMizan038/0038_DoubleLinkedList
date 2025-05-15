@@ -76,8 +76,35 @@ class DoubleLinkedList
 
             //insert  last node 
             if (current->next != NULL)
-            current->next->prev = newnNode; //step9c
+            current->next->prev = newNode; //step9c
 
             current->next = newNode; //step9d
+        }
+
+        void hapus()
+        {
+            if (START == NULL)
+            {
+                cout << "\nList empty" << endl;
+                return;
+            }
+
+            cout <<"\nEnter the roll number of student whose is to be daleted";
+            int rollNo;
+            cin >> rollNo;
+
+            Node *current = START;
+
+            //step 1. traverse the list to find the node
+            while (current != NULL && current->noMhs != rollNo)
+                current = current->next;
+
+            if (current == NULL)
+            {
+                cout << "record not found" << endl;
+                return;
+            }
+
+            
         }
 }
