@@ -42,6 +42,8 @@ class DoubleLinkedList
                     cout << "\nDuplicate number not allowed" << end;
                     return;
                 }
+                //step 4. newNode.next = START
+                newNode->next = START;
             }
         }
 }
